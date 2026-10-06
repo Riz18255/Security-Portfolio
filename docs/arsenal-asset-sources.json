@@ -1,0 +1,407 @@
+{
+  "created_utc": "2026-10-06",
+  "asset_directory": "public/logos",
+  "scope": "Official project marks and fonts for cybersecurity portfolio.",
+  "display_guidance": "Use original assets with object-fit: contain and preserved aspect ratio. Use a light tile where dark lettering or original dark fills would disappear on a dark UI.",
+  "assets": [
+    {
+      "id": "metasploit",
+      "label": "Metasploit",
+      "local_file": "public/logos/metasploit.svg",
+      "file_name": "metasploit.svg",
+      "official_source_page": "https://www.metasploit.com/",
+      "asset_url": "https://www.metasploit.com/includes/images/metasploit-logo-light-external-use.svg",
+      "provenance_kind": "official project logo",
+      "acquisition": "Original asset downloaded unchanged",
+      "reuse_notes": "Official light horizontal lockup; filename explicitly says external-use. Suitable for dark UI. Rapid7 trademark; no broad logo license established. Preserve aspect ratio.",
+      "bytes": 12981,
+      "sha256": "facd8521414f1bdb00a6a033c603642c88cec3403d08575ebaa16801a98c2c51",
+      "viewBox": "0 0 421 92",
+      "dimensions": {
+        "width": "421",
+        "height": "92"
+      },
+      "external_references": [],
+      "script_elements": 0
+    },
+    {
+      "id": "hydra",
+      "label": "Hydra",
+      "local_file": "public/logos/hydra.ico",
+      "file_name": "hydra.ico",
+      "official_source_page": "https://github.com/vanhauser-thc/thc-hydra/blob/master/hydra-logo.ico",
+      "asset_url": "https://github.com/vanhauser-thc/thc-hydra/raw/refs/heads/master/hydra-logo.ico",
+      "provenance_kind": "official project logo",
+      "acquisition": "Original asset downloaded unchanged",
+      "reuse_notes": "Original 96px ICO from official THC Hydra repository. Transparent background and clear on dark UI. Project code is AGPL-3.0; logo-specific rights not independently established.",
+      "bytes": 38078,
+      "sha256": "e1f028880f7a3e0bae5adb9cc044796864e5040a1e1aa1e65c175789e63d65e9",
+      "dimensions": {
+        "width": 96,
+        "height": 96,
+        "mode": "RGBA"
+      }
+    },
+    {
+      "id": "sqlmap",
+      "label": "SQLMap",
+      "local_file": "public/logos/sqlmap.png",
+      "file_name": "sqlmap.png",
+      "official_source_page": "https://sqlmap.org/",
+      "asset_url": "https://sqlmap.org/sqlmap-tarsier.png",
+      "provenance_kind": "official project mascot",
+      "acquisition": "Original asset downloaded unchanged",
+      "reuse_notes": "Original tarsier mascot from official homepage. Transparent PNG; suitable for dark UI. Code license does not establish a separate logo license.",
+      "bytes": 578632,
+      "sha256": "372bef1f3cc583173ba5177178c3b0aa8bd6f64d17086693547100bd442a0df8",
+      "dimensions": {
+        "width": 600,
+        "height": 436,
+        "mode": "RGBA"
+      }
+    },
+    {
+      "id": "exploitdb",
+      "label": "Searchsploit / ExploitDB",
+      "local_file": "public/logos/exploitdb.png",
+      "file_name": "exploitdb.png",
+      "official_source_page": "https://www.exploit-db.com/",
+      "asset_url": "https://www.exploit-db.com/images/spider-white.png",
+      "provenance_kind": "official platform mark",
+      "acquisition": "Original asset downloaded unchanged",
+      "reuse_notes": "Official ExploitDB white spider. Represents Searchsploit affiliation with ExploitDB; not a dedicated Searchsploit mark. Suitable for dark UI. Logo-specific reuse license not established.",
+      "bytes": 6016,
+      "sha256": "4a7982ff0abcb81a8a30f433a6ccb9d60bb9407eb053b6015cb2baf9ede1554d",
+      "dimensions": {
+        "width": 144,
+        "height": 144,
+        "mode": "RGBA"
+      }
+    },
+    {
+      "id": "nessus",
+      "label": "Nessus",
+      "local_file": "public/logos/nessus.svg",
+      "file_name": "nessus.svg",
+      "official_source_page": "https://www.tenable.com/products/nessus",
+      "asset_url": "https://www.tenable.com/products/nessus",
+      "provenance_kind": "official product mark",
+      "acquisition": "Official inline SVG DOM serialized unchanged",
+      "reuse_notes": "Authentic hexagonal ring shown immediately above Tenable Nessus heading. Original dark fill requires a light tile on dark UI. Nessus is a Tenable trademark. No logo-specific reuse license established.",
+      "bytes": 432,
+      "sha256": "6d0eb57b05b3775d65d7608fb7d220bfc9e9c4679cd5f7c8010077681df69d61",
+      "inline_selector": ".c-5050__content > svg",
+      "viewBox": "0 0 199 230",
+      "dimensions": {
+        "width": "199",
+        "height": "230"
+      },
+      "external_references": [],
+      "script_elements": 0
+    },
+    {
+      "id": "tenable",
+      "label": "Tenable",
+      "local_file": "public/logos/tenable.svg",
+      "file_name": "tenable.svg",
+      "official_source_page": "https://www.tenable.com/products/nessus",
+      "asset_url": "https://www.tenable.com/products/nessus",
+      "provenance_kind": "official vendor mark",
+      "acquisition": "Official inline SVG DOM serialized unchanged",
+      "reuse_notes": "Optional official vendor lockup for Nessus. Original vendor mark; not a dedicated Nessus logo. Preserve aspect ratio. No logo-specific reuse license established.",
+      "bytes": 4332,
+      "sha256": "0b584c9fe3926a3741fda6f59aa7f305432b78c1af3c824076de8e4c762fde4b",
+      "inline_selector": "#site-nav a.logo svg",
+      "viewBox": "0 0 158 42",
+      "dimensions": {
+        "width": "158",
+        "height": "42"
+      },
+      "external_references": [],
+      "script_elements": 0
+    },
+    {
+      "id": "qualys",
+      "label": "Qualys",
+      "local_file": "public/logos/qualys.svg",
+      "file_name": "qualys.svg",
+      "official_source_page": "https://www.qualys.com/company/newsroom/media-contacts",
+      "asset_url": "https://ik.imagekit.io/qualys/image/logo/qualys-shield.svg",
+      "provenance_kind": "official vendor mark",
+      "acquisition": "Original asset downloaded unchanged",
+      "reuse_notes": "Official shield served by Qualys website. Suitable compact mark. Official media page links brand guidelines; follow trademark guidelines and preserve original color/artwork. No general reuse license established.",
+      "bytes": 804,
+      "sha256": "849f5d553094eeba08beddc04de6cb3c49504a2c739e32ae27c0095f35af66ea",
+      "brand_guidelines_page": "https://assets.qualys.com/web/56a928c045047ac/qualys-brand-guidelines/",
+      "viewBox": "0 0 246.183 293.111",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "external_references": [],
+      "script_elements": 0
+    },
+    {
+      "id": "beef",
+      "label": "BeEF",
+      "local_file": "public/logos/beef.png",
+      "file_name": "beef.png",
+      "official_source_page": "https://beefproject.com/",
+      "asset_url": "https://beefproject.com/images/logo.png",
+      "provenance_kind": "official project logo",
+      "acquisition": "Original asset downloaded unchanged",
+      "reuse_notes": "Original BeEF logo from project homepage. Some lettering is dark; use a light tile for full readability. No logo-specific reuse license established.",
+      "bytes": 13283,
+      "sha256": "4f080fc77ee3a6864024d1e36c4b43c0f3350b832e54f45d2acda9e4d5894a05",
+      "dimensions": {
+        "width": 200,
+        "height": 149,
+        "mode": "RGBA"
+      }
+    },
+    {
+      "id": "nikto",
+      "label": "Nikto / CIRT",
+      "local_file": "public/logos/nikto-publisher.png",
+      "file_name": "nikto-publisher.png",
+      "official_source_page": "https://cirt.net/",
+      "asset_url": "https://cirt.net/wp-content/uploads/2025/08/alienlogo_vectorized_500x609.png",
+      "provenance_kind": "official publisher mark",
+      "acquisition": "Original asset downloaded unchanged",
+      "reuse_notes": "CIRT alien mark from official publisher homepage associated with Nikto. Not claimed as a dedicated Nikto product logo. Original image has an opaque white background. No logo-specific reuse license established.",
+      "bytes": 85686,
+      "sha256": "c3d5e2256ee81f62e6c17f1915ce2b3210a27ec43cfaa032ebd86f5c8d3b1edc",
+      "dimensions": {
+        "width": 1500,
+        "height": 1828,
+        "mode": "P"
+      }
+    },
+    {
+      "id": "john",
+      "label": "John the Ripper / Openwall",
+      "local_file": "public/logos/openwall.png",
+      "file_name": "openwall.png",
+      "official_source_page": "https://www.openwall.com/john/",
+      "asset_url": "https://www.openwall.com/logo.png",
+      "provenance_kind": "official vendor mark",
+      "acquisition": "Original asset downloaded unchanged",
+      "reuse_notes": "Openwall publisher logo from official John the Ripper page. Not a dedicated John the Ripper product mark. Original image includes white background and vendor tagline. No logo-specific reuse license established.",
+      "bytes": 7743,
+      "sha256": "1762543918f07a82a6b1b04df4ff218f48f3a6e04fea41a0b0a654609f18aa31",
+      "dimensions": {
+        "width": 182,
+        "height": 80,
+        "mode": "RGBA"
+      }
+    },
+    {
+      "id": "hashcat",
+      "label": "Hashcat",
+      "local_file": "public/logos/hashcat.png",
+      "file_name": "hashcat.png",
+      "official_source_page": "https://hashcat.net/hashcat/",
+      "asset_url": "https://hashcat.net/s/i/hashcat-icon.png",
+      "provenance_kind": "official project icon",
+      "acquisition": "Original asset downloaded unchanged",
+      "reuse_notes": "Original project icon served by official homepage. Suitable for small dark UI display. Project code is MIT; a separate logo license is not established.",
+      "bytes": 14487,
+      "sha256": "8c7c568df6ec2033571d731ae2f42db5b63e6bf5517ffb16387ff9af69d7755f",
+      "dimensions": {
+        "width": 128,
+        "height": 128,
+        "mode": "RGBA"
+      }
+    },
+    {
+      "id": "zap",
+      "label": "ZAP",
+      "local_file": "public/logos/zap.svg",
+      "file_name": "zap.svg",
+      "official_source_page": "https://www.zaproxy.org/",
+      "asset_url": "https://www.zaproxy.org/img/zap-by-checkmarx.svg",
+      "provenance_kind": "official current project logo",
+      "acquisition": "Original asset downloaded unchanged",
+      "reuse_notes": "Current official ZAP by Checkmarx logo. Historical OWASP ZAP name should not imply this is an OWASP-branded asset. Preserve full original lockup. No logo-specific reuse license established.",
+      "bytes": 7337,
+      "sha256": "d0165a740710ca104187dbb3b5f38ead008655c5359556d7ed218e4cec677b5b",
+      "viewBox": "0 0 271 90",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "external_references": [],
+      "script_elements": 0
+    },
+    {
+      "id": "bloodhound",
+      "label": "BloodHound",
+      "local_file": "public/logos/bloodhound.png",
+      "file_name": "bloodhound.png",
+      "official_source_page": "https://specterops.github.io/bloodhound/",
+      "asset_url": "https://specterops.github.io/assets/img/bloodhound.png",
+      "provenance_kind": "official project logo",
+      "acquisition": "Original asset downloaded unchanged",
+      "reuse_notes": "Official SpecterOps BloodHound Community Edition logo. Dark wordmark requires a light tile for full readability. Project software Apache-2.0 license does not establish separate logo rights.",
+      "bytes": 84025,
+      "sha256": "28c4b1cd232d0e528d423b708c66a0f229516700ab4e1a4ea87256ef3005713b",
+      "dimensions": {
+        "width": 320,
+        "height": 321,
+        "mode": "RGBA"
+      }
+    },
+    {
+      "id": "autopsy",
+      "label": "Autopsy",
+      "local_file": "public/logos/autopsy.svg",
+      "file_name": "autopsy.svg",
+      "official_source_page": "https://www.autopsy.com/",
+      "asset_url": "https://www.autopsy.com/wp-content/uploads/2019/08/autopsy-logo.svg",
+      "provenance_kind": "official project logo",
+      "acquisition": "Original asset downloaded unchanged",
+      "reuse_notes": "Original horizontal Autopsy lockup from official project homepage. Preserve aspect ratio. No logo-specific reuse license established.",
+      "bytes": 24872,
+      "sha256": "000bf6c2d148a8e4d67690d29b79321541e62a71d565e781fb499f92144b9256",
+      "viewBox": "0 0 609 145",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "external_references": [],
+      "script_elements": 0
+    },
+    {
+      "id": "encase",
+      "label": "EnCase / OpenText",
+      "local_file": "public/logos/opentext.svg",
+      "file_name": "opentext.svg",
+      "official_source_page": "https://www.opentext.com/products/forensic",
+      "asset_url": "https://www.opentext.com/products/forensic",
+      "provenance_kind": "official vendor mark",
+      "acquisition": "Official inline SVG DOM serialized unchanged",
+      "reuse_notes": "Current OpenText vendor wordmark from official OpenText Forensic product page. Product is formerly EnCase. This is not a dedicated legacy EnCase logo. Preserve aspect ratio; trademark terms apply.",
+      "bytes": 6496,
+      "sha256": "4b088a94617cf09ecf350c94e0d13e6bad4e2a43351685233bee4cf52c2205ac",
+      "inline_selector": "a.navbar-brand svg",
+      "viewBox": "0 0 200 32",
+      "dimensions": {
+        "width": "200",
+        "height": "32"
+      },
+      "external_references": [],
+      "script_elements": 0
+    },
+    {
+      "id": "kali",
+      "label": "Kali Linux",
+      "local_file": "public/logos/kali.svg",
+      "file_name": "kali.svg",
+      "official_source_page": "https://www.kali.org/",
+      "asset_url": "https://www.kali.org/images/kali-logo.svg",
+      "provenance_kind": "official platform logo",
+      "acquisition": "Official standalone SVG DOM serialized unchanged",
+      "reuse_notes": "Official Kali dragon from project website. Preserve original artwork. Follow Kali trademark policy; do not imply endorsement.",
+      "bytes": 2774,
+      "sha256": "d7c27d5017d35dd24cf32f614de6f1ca320d3c4729907240a0148b95d2493ddc",
+      "trademark_policy": "https://www.kali.org/docs/policy/trademark/",
+      "viewBox": "0 0 519.36 293.65",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "external_references": [],
+      "script_elements": 0
+    },
+    {
+      "id": "powershell",
+      "label": "PowerShell",
+      "local_file": "public/logos/powershell.svg",
+      "file_name": "powershell.svg",
+      "official_source_page": "https://github.com/PowerShell/PowerShell/blob/master/assets/ps_fluent_design_384.svg",
+      "asset_url": "https://raw.githubusercontent.com/PowerShell/PowerShell/refs/heads/master/assets/ps_fluent_design_384.svg",
+      "provenance_kind": "official project logo",
+      "acquisition": "Official standalone SVG DOM serialized unchanged",
+      "reuse_notes": "Official Fluent Design asset from Microsoft PowerShell repository. Logo assets explicitly excluded from source MIT license. Subject to Microsoft trademark permissions. Preserve original artwork.",
+      "bytes": 3196,
+      "sha256": "f2ef9126318c67f96315b60eea9ca0e2956caaf9b20008ed9bd663a0506c41f3",
+      "terms_page": "https://www.microsoft.com/en-us/legal/intellectualproperty/permissions",
+      "logo_terms_source": "https://github.com/PowerShell/PowerShell/tree/master/assets",
+      "viewBox": "0 0 384 240",
+      "dimensions": {
+        "width": "384",
+        "height": "240"
+      },
+      "external_references": [],
+      "script_elements": 0
+    },
+    {
+      "id": "font-space-grotesk",
+      "label": "Space Grotesk",
+      "local_file": "public/logos/space-grotesk-variable.woff2",
+      "file_name": "space-grotesk-variable.woff2",
+      "official_source_page": "https://github.com/floriankarsten/space-grotesk/blob/master/fonts/woff2/SpaceGrotesk%5Bwght%5D.woff2",
+      "asset_url": "https://github.com/floriankarsten/space-grotesk/raw/refs/heads/master/fonts/woff2/SpaceGrotesk%5Bwght%5D.woff2",
+      "provenance_kind": "official font binary",
+      "acquisition": "Original asset downloaded unchanged",
+      "reuse_notes": "Original official variable WOFF2. Licensed under SIL Open Font License 1.1. Include accompanying copyright and license when redistributing. Do not sell font alone; modified font names subject to OFL rules.",
+      "bytes": 49256,
+      "sha256": "8e085aa438094f11487a836652edd5c054fa6a96f63fc7c282105ee3a4b08c07",
+      "license": "SIL OFL 1.1",
+      "license_file": "public/logos/SPACE-GROTESK-OFL.txt",
+      "license_source_page": "https://github.com/floriankarsten/space-grotesk/blob/master/OFL.txt",
+      "css_weight": "300 700"
+    },
+    {
+      "id": "font-jetbrains-mono",
+      "label": "JetBrains Mono",
+      "local_file": "public/logos/jetbrains-mono-regular.woff2",
+      "file_name": "jetbrains-mono-regular.woff2",
+      "official_source_page": "https://github.com/JetBrains/JetBrainsMono/blob/master/fonts/webfonts/JetBrainsMono-Regular.woff2",
+      "asset_url": "https://github.com/JetBrains/JetBrainsMono/raw/refs/heads/master/fonts/webfonts/JetBrainsMono-Regular.woff2",
+      "provenance_kind": "official font binary",
+      "acquisition": "Original asset downloaded unchanged",
+      "reuse_notes": "Original official Regular WOFF2. Licensed under SIL Open Font License 1.1. Include accompanying copyright and license when redistributing. Do not sell font alone; modified font names subject to OFL rules.",
+      "bytes": 92380,
+      "sha256": "f1a7a03672cdd494ce0d5543fac6e4360fe22403c6de297fdc2e55a815f7baff",
+      "license": "SIL OFL 1.1",
+      "license_file": "public/logos/JETBRAINS-MONO-OFL.txt",
+      "license_source_page": "https://github.com/JetBrains/JetBrainsMono/blob/master/OFL.txt",
+      "css_weight": "400"
+    }
+  ],
+  "fallbacks": [
+    {
+      "id": "gobuster",
+      "label": "Gobuster",
+      "local_file": null,
+      "official_source_page": "https://github.com/OJ/gobuster",
+      "asset_url": null,
+      "fallback": "Plain text label: Gobuster",
+      "reason": "No dedicated authentic project logo verified in official repository README or root; only status badges observed."
+    },
+    {
+      "id": "ftk",
+      "label": "FTK / Exterro",
+      "local_file": null,
+      "official_source_page": "https://www.exterro.com/digital-forensics-software/ftk-forensic-toolkit",
+      "asset_url": "https://cdn.prod.website-files.com/697952141e2c1fbd9894f63d/697952141e2c1fbd9894f665_logo-light.svg",
+      "fallback": "Plain text label: Exterro FTK",
+      "reason": "Official vendor logo asset was observed, but cloud browser security policy explicitly blocked its CDN URL. No workaround attempted; no dedicated FTK logo downloaded."
+    }
+  ],
+  "license_files": [
+    {
+      "local_file": "public/logos/JETBRAINS-MONO-OFL.txt",
+      "bytes": 4398,
+      "sha256": "92b6975fc36b22d20c0dd65aada082e57fdd23c0219a5a259e126cfc18314a84",
+      "acquisition": "Complete original license text read from official GitHub file-content textarea"
+    },
+    {
+      "local_file": "public/logos/SPACE-GROTESK-OFL.txt",
+      "bytes": 4401,
+      "sha256": "041cf58f576710d4f2a507b173b334b24f3d66a05d61068231ea57ed82be6b5a",
+      "acquisition": "Complete original license text read from official GitHub file-content textarea"
+    }
+  ]
+}
