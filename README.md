@@ -1,8 +1,10 @@
 # Cybersecurity Portfolio — Riaz Ahmed Ansari
 
-This repository contains the source code for my personal cybersecurity portfolio website. I am a BS Cybersecurity graduate from Air University in Islamabad, focusing on offensive security, detection engineering, network security, and secure systems engineering.
+Personal cybersecurity portfolio covering my projects, practical labs, internships, certifications, and academic work across offensive security, detection engineering, network security, DevSecOps, cloud security, and ICS/OT security.
 
-The site is built to provide recruiters and security professionals with an honest, detailed look at my practical work: lab environments, detection pipelines, internship experience, certifications, and academic foundations.
+**Live Portfolio:** https://rizahmedportfolio.vercel.app
+
+I completed my BS Cybersecurity at Air University, Islamabad. This repository contains the source code for the portfolio and the case studies used throughout the site.
 
 ---
 
@@ -37,8 +39,8 @@ The site is built to provide recruiters and security professionals with an hones
 ## Site Features
 
 - **Interactive 3D Security Sculpture:** Built with Three.js and WebGL, featuring a 2D canvas software fallback. Respects OS reduced-motion preferences (`prefers-reduced-motion`) and pauses when off-screen.
-- **Case Study Deep Dives:** Detailed write-ups for nine projects and coursework assessments, each breaking down the challenge, my exact contribution, technical stack, metrics, and key takeaways.
-- **Security Arsenal:** A searchable catalog of 37 tools, platforms, and languages categorized by domain (Offensive, Detection, DevSecOps, Cloud, Forensics, Languages) with context on where and how each was used.
+- **Case Studies:** Nine detailed project and coursework write-ups covering the problem, my contribution, technical stack, results, and lessons learned.
+- **Security Arsenal:** Searchable collection of tools, platforms, and languages I have used across offensive security, detection, DevSecOps, cloud, forensics, and development.
 - **Quick Search (Ctrl+K):** Command-palette style modal for searching across projects, tools, and site sections.
 - **Academic Foundation:** Full coursework outline from my BS Cybersecurity degree at Air University.
 - **Tactile Sound Switch:** Optional ambient background audio with an accessible on/off toggle (disabled by default).
@@ -62,33 +64,38 @@ The site is built to provide recruiters and security professionals with an hones
 ### Prerequisites
 
 - Node.js 22.13.0 or higher
-- pnpm 11 (`corepack enable` or `npm install -g pnpm`)
+- pnpm 11
 
 ### Setup
 
-1. Clone or extract the repository:
-   ```bash
-   git clone <repo-url>
-   cd riaz-security-portfolio
-   ```
+Clone the repository:
 
-2. Install dependencies:
-   ```bash
-   pnpm install --frozen-lockfile
-   ```
+```bash
+git clone https://github.com/Riz18255/Security-Portfolio.git
+cd Security-Portfolio
+```
 
-3. Start the development server:
-   ```bash
-   pnpm dev
-   ```
-   Open `http://localhost:3000` in your browser.
+Install dependencies:
 
-4. Run checks and build:
-   ```bash
-   pnpm typecheck
-   pnpm build
-   pnpm start
-   ```
+```bash
+pnpm install --frozen-lockfile
+```
+
+Start the development server:
+
+```bash
+pnpm dev
+```
+
+Open `http://localhost:3000` in your browser.
+
+Run checks and build:
+
+```bash
+pnpm typecheck
+pnpm build
+pnpm start
+```
 
 ---
 
