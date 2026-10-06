@@ -1,14 +1,189 @@
 "use client";
-import {useEffect,useState} from "react";
-import {Search,Plus,BookOpen} from "lucide-react";
-import {Tabs,TabsList,TabsTrigger,TabsContent} from "@/components/ui/tabs";
-import {Dialog,DialogContent,DialogHeader,DialogTitle,DialogDescription} from "@/components/ui/dialog";
-import {arsenal,toolGroups,knowledge,type Tool} from "@/lib/arsenal-data";
-import {allWork} from "@/lib/portfolio-data";
-import {ToolLogo} from "@/components/tool-logo";
-export function Arsenal(){
- const [group,setGroup]=useState("All tools"),[query,setQuery]=useState(""),[selected,setSelected]=useState<Tool|null>(null);
- useEffect(()=>{const open=(e:Event)=>{const name=(e as CustomEvent<string>).detail;setSelected(arsenal.find(t=>t.name===name)||null);};window.addEventListener("portfolio:tool",open);const name=new URLSearchParams(location.search).get("tool");if(name)setSelected(arsenal.find(t=>t.name===name)||null);return()=>window.removeEventListener("portfolio:tool",open);},[]);
- const matches=(t:Tool,g:string)=>(g==="All tools"||t.group===g)&&`${t.name} ${t.aliases||""} ${t.description}`.toLowerCase().includes(query.toLowerCase());
- return <><Tabs value={group} onValueChange={setGroup} className="arsenal-tabs"><div className="arsenal-controls"><TabsList className="filter-list arsenal-filter" aria-label="Filter tools by discipline">{toolGroups.map(g=><TabsTrigger className="filter-trigger" value={g} key={g}>{g}</TabsTrigger>)}</TabsList><div className="tool-search"><Search size={16}/><label htmlFor="tool-search" className="sr-only">Search arsenal</label><input id="tool-search" placeholder="Find a tool" value={query} onChange={e=>setQuery(e.target.value)}/></div></div><div className="arsenal-caption"><span>TOOLS / PLATFORMS / LANGUAGES</span><span aria-live="polite">{arsenal.filter(t=>matches(t,group)).length} of {arsenal.length}</span></div>{toolGroups.map(g=><TabsContent key={g} value={g} className="tool-grid">{arsenal.filter(t=>matches(t,g)).map(t=><button className="tool-card" key={t.name} onClick={()=>setSelected(t)} aria-label={`Explore ${t.name}`}><ToolLogo name={t.name}/><span>{t.name}</span><Plus size={14} className="tool-plus" aria-hidden="true"/></button>)}{arsenal.filter(t=>matches(t,g)).length===0&&<div className="arsenal-empty">No tools match “{query}”. <button onClick={()=>{setQuery("");setGroup("All tools");}}>Clear filters</button></div>}</TabsContent>)}</Tabs><div className="knowledge-row"><p className="mono">METHODS & FOUNDATIONS</p><div>{knowledge.map(k=><span key={k}>{k}</span>)}</div></div><Dialog open={!!selected} onOpenChange={open=>{if(!open)setSelected(null);}}><DialogContent className="tool-dialog">{selected&&<><div className="tool-dialog-logo"><ToolLogo name={selected.name}/></div><DialogHeader><p className="eyebrow">{selected.group}</p><DialogTitle>{selected.name}</DialogTitle><DialogDescription>{selected.description}</DialogDescription></DialogHeader><p className="tool-context"><BookOpen size={16}/>{selected.context}</p>{selected.work.length>0&&<div className="tool-evidence"><h3>Related work</h3>{selected.work.map(id=>{const p=allWork.find(w=>w.id===id);return p?<a href={`/work/${p.id}`} key={id}><span>{p.title}</span><span>Case study</span></a>:null;})}</div>}</>}</DialogContent></Dialog></>;
+import { useEffect, useState } from "react";
+import { Search, Plus, BookOpen, ChevronDown, ChevronUp } from "lucide-react";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { arsenal, toolGroups, knowledge, type Tool } from "@/lib/arsenal-data";
+import { allWork } from "@/lib/portfolio-data";
+import { ToolLogo } from "@/components/tool-logo";
+
+export function Arsenal() {
+  const [group, setGroup] = useState("All tools");
+  const [query, setQuery] = useState("");
+  const [selected, setSelected] = useState<Tool | null>(null);
+  const [showAllMobile, setShowAllMobile] = useState(false);
+
+  useEffect(() => {
+    const open = (e: Event) => {
+      const name = (e as CustomEvent<string>).detail;
+      setSelected(arsenal.find((t) => t.name === name) || null);
+    };
+    window.addEventListener("portfolio:tool", open);
+    const name = new URLSearchParams(location.search).get("tool");
+    if (name) setSelected(arsenal.find((t) => t.name === name) || null);
+    return () => window.removeEventListener("portfolio:tool", open);
+  }, []);
+
+  const matches = (t: Tool, g: string) =>
+    (g === "All tools" || t.group === g) &&
+    `${t.name} ${t.aliases || ""} ${t.description}`
+      .toLowerCase()
+      .includes(query.toLowerCase());
+
+  const isSearching = query.trim().length > 0;
+  const isExpanded = showAllMobile || isSearching;
+
+  return (
+    <>
+      <Tabs
+        value={group}
+        onValueChange={(val) => {
+          setGroup(val);
+          setShowAllMobile(false);
+        }}
+        className="arsenal-tabs"
+      >
+        <div className="arsenal-controls">
+          <TabsList className="filter-list arsenal-filter" aria-label="Filter tools by discipline">
+            {toolGroups.map((g) => (
+              <TabsTrigger className="filter-trigger" value={g} key={g}>
+                {g}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+          <div className="tool-search">
+            <Search size={16} />
+            <label htmlFor="tool-search" className="sr-only">
+              Search arsenal
+            </label>
+            <input
+              id="tool-search"
+              placeholder="Find a tool"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+          </div>
+        </div>
+
+        <div className="arsenal-caption">
+          <span>TOOLS / PLATFORMS / LANGUAGES</span>
+          <span aria-live="polite">
+            {arsenal.filter((t) => matches(t, group)).length} of {arsenal.length}
+          </span>
+        </div>
+
+        {toolGroups.map((g) => {
+          const list = arsenal.filter((t) => matches(t, g));
+          const hasOverflow = list.length > 14;
+
+          return (
+            <TabsContent
+              key={g}
+              value={g}
+              className={`tool-grid ${isExpanded ? "is-expanded" : ""}`}
+            >
+              {list.map((t, idx) => (
+                <button
+                  className={`tool-card ${idx >= 14 ? "tool-card-overflow" : ""}`}
+                  key={t.name}
+                  onClick={() => setSelected(t)}
+                  aria-label={`Explore ${t.name}`}
+                >
+                  <ToolLogo name={t.name} />
+                  <span>{t.name}</span>
+                  <Plus size={14} className="tool-plus" aria-hidden="true" />
+                </button>
+              ))}
+
+              {list.length === 0 && (
+                <div className="arsenal-empty">
+                  No tools match “{query}”.{" "}
+                  <button
+                    onClick={() => {
+                      setQuery("");
+                      setGroup("All tools");
+                    }}
+                  >
+                    Clear filters
+                  </button>
+                </div>
+              )}
+
+              {hasOverflow && !isSearching && (
+                <div className="arsenal-mobile-toggle">
+                  <button
+                    type="button"
+                    className="arsenal-toggle-button"
+                    aria-expanded={showAllMobile}
+                    onClick={() => setShowAllMobile(!showAllMobile)}
+                  >
+                    {showAllMobile ? (
+                      <>
+                        <ChevronUp size={16} aria-hidden="true" />
+                        <span>Show fewer tools</span>
+                      </>
+                    ) : (
+                      <>
+                        <ChevronDown size={16} aria-hidden="true" />
+                        <span>Show all {list.length} tools</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+              )}
+            </TabsContent>
+          );
+        })}
+      </Tabs>
+
+      <div className="knowledge-row">
+        <p className="mono">METHODS & FOUNDATIONS</p>
+        <div>
+          {knowledge.map((k) => (
+            <span key={k}>{k}</span>
+          ))}
+        </div>
+      </div>
+
+      <Dialog
+        open={!!selected}
+        onOpenChange={(open) => {
+          if (!open) setSelected(null);
+        }}
+      >
+        <DialogContent className="tool-dialog">
+          {selected && (
+            <>
+              <div className="tool-dialog-logo">
+                <ToolLogo name={selected.name} />
+              </div>
+              <DialogHeader>
+                <p className="eyebrow">{selected.group}</p>
+                <DialogTitle>{selected.name}</DialogTitle>
+                <DialogDescription>{selected.description}</DialogDescription>
+              </DialogHeader>
+              <p className="tool-context">
+                <BookOpen size={16} />
+                {selected.context}
+              </p>
+              {selected.work.length > 0 && (
+                <div className="tool-evidence">
+                  <h3>Related work</h3>
+                  {selected.work.map((id) => {
+                    const p = allWork.find((w) => w.id === id);
+                    return p ? (
+                      <a href={`/work/${p.id}`} key={id}>
+                        <span>{p.title}</span>
+                        <span>Case study</span>
+                      </a>
+                    ) : null;
+                  })}
+                </div>
+              )}
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
+    </>
+  );
 }

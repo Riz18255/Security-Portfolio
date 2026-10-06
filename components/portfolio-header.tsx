@@ -9,7 +9,7 @@ import {arsenal} from "@/lib/arsenal-data";
 const sections=[["Work","work"],["Arsenal","arsenal"],["Experience","experience"],["About","about"],["Credentials","credentials"]];
 export function PortfolioHeader({home=true}:{home?:boolean}){
  const [menu,setMenu]=useState(false),[search,setSearch]=useState(false),[active,setActive]=useState("");
- useEffect(()=>{const key=(e:KeyboardEvent)=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();setSearch(s=>!s);}};window.addEventListener("keydown",key);return()=>window.removeEventListener("keydown",key);},[]);
+ useEffect(()=>{const key=(e:KeyboardEvent)=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();setSearch(s=>!s);}else if(e.key==="Escape"){setMenu(false);}};window.addEventListener("keydown",key);return()=>window.removeEventListener("keydown",key);},[]);
  useEffect(()=>{if(!home)return;const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)setActive(e.target.id);});},{rootMargin:"-15% 0px -65% 0px",threshold:0});sections.forEach(([,id])=>{const e=document.getElementById(id);if(e)observer.observe(e);});return()=>observer.disconnect();},[home]);
  function go(url:string){setSearch(false);setMenu(false);window.location.assign(url);}
  function tool(name:string){setSearch(false);if(home){document.getElementById("arsenal")?.scrollIntoView({behavior:"smooth"});window.dispatchEvent(new CustomEvent("portfolio:tool",{detail:name}));}else go(`/?tool=${encodeURIComponent(name)}#arsenal`);}
