@@ -89,11 +89,16 @@ pnpm dev
 
 Open `http://localhost:3000` in your browser.
 
-Run checks and build:
+Run validation checks:
 
 ```bash
 pnpm typecheck
 pnpm build
+```
+
+Run the production build locally:
+
+```bash
 pnpm start
 ```
 
@@ -111,7 +116,7 @@ pnpm start
 ├── components/
 │   ├── arsenal.tsx          # Tool filtering, search, and detail dialog
 │   ├── canvas-scene.ts      # 2D canvas fallback renderer for the 3D sculpture
-│   ├── portfolio-controls.tsx# Ambient sound toggle switch
+│   ├── portfolio-controls.tsx # Ambient sound toggle switch
 │   ├── portfolio-header.tsx # Sticky navigation, brand mark, and search palette
 │   ├── project-visual.tsx   # Workflow diagram component for projects
 │   ├── security-scene.tsx   # Three.js 3D sculpture component
@@ -136,7 +141,7 @@ pnpm start
 
 ## Deployment on Vercel
 
-The project is configured for deployment on [Vercel](https://vercel.com):
+The portfolio is deployed on [Vercel](https://vercel.com/) and automatically redeploys whenever changes are pushed to the main branch.
 
 1. Push this repository to GitHub (public or private).
 2. In Vercel, select **Add New... → Project** and import the repository.
