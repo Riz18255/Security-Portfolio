@@ -545,8 +545,9 @@ main,.site-footer{position:relative;z-index:1}
   .nav-tools{gap:6px}
   .nav-cv{min-width:44px;min-height:44px;padding:0;border:1px solid #3b4d43;border-radius:4px}
   .nav-cv>span{display:none}
-  .sound-control{gap:5px;min-width:44px;min-height:44px}
-  .sound-control label{display:none}
+  .sound-control{gap:5px;min-height:44px}
+  .sound-control label{display:inline-flex;align-items:center;justify-content:center;color:#a5b7af;cursor:pointer;min-height:44px}
+  .sound-control label>span{display:none}
   .sound-control [data-slot=switch]{--sound-track-width:28px;--sound-track-half:14px;width:44px;min-width:44px;height:44px;min-height:44px}
   .search-toggle{min-width:44px;min-height:44px;padding:0}
   .menu-toggle{min-width:44px;min-height:44px;border:1px solid #3b4d43;border-radius:4px}
@@ -658,6 +659,7 @@ main,.site-footer{position:relative;z-index:1}
   .shell{width:calc(100% - 24px)}
   .nav-shell{width:calc(100% - 16px);gap:6px}
   .nav-tools{gap:4px}
+  .sound-control{gap:3px}
   .hero h1{font-size:2.6rem}
   .hero-actions .button{padding-inline:12px}
   .hero-social{gap:15px}

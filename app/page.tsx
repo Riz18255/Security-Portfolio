@@ -218,7 +218,7 @@ export default function Home(){
           <div className="about-copy reveal">
             <p className="eyebrow"><span>/04</span> ABOUT</p>
             <h2>Curiosity is<br/>part of the work.</h2>
-            <p>I’m Riaz, a cybersecurity graduate from Air University in Islamabad. I enjoy understanding how a weakness becomes an attack path, what evidence it leaves, and which controls make a difference.</p>
+            <p>I'm Ahmed, a cybersecurity graduate from Air University in Islamabad. I enjoy understanding how a weakness becomes an attack path, what evidence it leaves, and which controls make a difference.</p>
             <p>My practical experience spans offensive labs, forensic coursework, real-time detection, industrial security, and secure deployment workflows. I bring the same habit to each: investigate carefully, explain clearly, and keep learning.</p>
             <div className="about-signature"><span>Riaz Ahmed Ansari</span><small>OFFENSE / INVESTIGATION / ENGINEERING</small></div>
           </div>
